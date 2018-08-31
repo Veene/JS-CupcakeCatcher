@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Page Title</title>
+    
+</head>
+<body>
+    <canvas height="500" width="500" style="border: 2px solid black" id='ctx'></canvas>
+
+    <script type="text/javascript">
+        let ctx = document.getElementById('ctx').getContext('2d');
+
+        const HEIGHT = 500;
+        const WIDTH = 500;
+        let catcherOne = new Image();
+        let catcherTwo = new Image();
+        let catcherThree = new Image();
+        let catcherFour = new Image();
+        let background = new Image();
+        let blood = new Image();
+        let tile = new Image();
+        let food = new Image();
+
+        background.onload = function() {
+            blood.onload = function () {
+                catcherOne.onload = function () {
+                    catcherTwo.onload = function () {
+                        catcherThree.onload = function () {
+                            catcherFour.onload = function () {
+                                food.onload = function () {
+                                    tile.onload = function () {
+                                        // GAME AREA
+                                        console.log("Loaded");
+                                    }
+                                    tile.src = "images/tile.png"
+                                }
+                                food.src = "images/food.png"
+                            }
+                            catcherFour.src = "images/catcher4.png"
+                        }
+                        catcherThree.src ="images/catcher3.png"
+                    }
+                    catcherTwo.src = "images/catcher2.png"
+                }
+                catcherOne.src = "images/catcher1.png"
+            }
+            blood.src = "images/blood.png"
+        }
+        background.src = "images/background.jpg"
+    
+    
+    
+    </script>
+    
+</body>
+</html>
